@@ -30,6 +30,10 @@ app.post('/sendToWebhook', async (req, res) => {
   }
 });
 
+app.get('/', async (req, res) => {
+  res.status(200).json({status: "welcome"});
+})
+
 app.listen(port, () => {
   console.log(`Servidor escuchando en el puerto ${port}`);
 });
